@@ -40,7 +40,7 @@ usernameField.addEventListener("keypress", function(event) {
     }
   });                
 
-
+// If user confirms username
 function submitUsername () {
   form_submit.style.display="block";
   password.style.display="block";
@@ -53,10 +53,9 @@ function submitUsername () {
   header.innerHTML="Vul je wachtwoord in";
   password.focus();
   password.select();
-
-
 };
 
+// If user wants to change user name, after confirmation
 function editUsername () {
     form_submit.style.display="none";
     password.style.display="none";
@@ -67,5 +66,4 @@ function editUsername () {
     usernameField.style.border="1px solid #ccc";
     editUsernameButton.style.display="none";
     header.innerHTML="Vul je gebruikersnaam in";
-
   };
